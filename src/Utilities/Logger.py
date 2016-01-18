@@ -53,7 +53,7 @@ def error(self, msg, *args, **kwargs):
         self.error_help(msg, *args, **kwargs)
 
 logging.basicConfig(level="CRITICAL")
-log = logging.getLogger("SubClassReasoner")
+log = logging.getLogger("TypeSimilarityTools")
 
 log.debug_help = log.debug
 log.debug = types.MethodType(debug, log)

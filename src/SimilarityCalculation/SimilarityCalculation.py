@@ -1,3 +1,2 @@
-class SimilarityCalculator(object):
-    def __init__(self):
-        pas
+def get_similarity(type_a, type_b, server):
+    return 0
