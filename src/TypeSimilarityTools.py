@@ -5,6 +5,7 @@ from SQLiteStore.SQLiteStore import SQLiteStore
 import time
 from multiprocessing import Process
 from SimilarityCalculation.SimilarityCalculation import get_similarity
+import grequests
 
 
 class TypeSimilarityTools(object):
