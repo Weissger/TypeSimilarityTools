@@ -1,9 +1,3 @@
-[submodule "src/TST.TypeReasoner"]
-	path = src/TypeReasoner
-	url = https://github.com/Weissger/TST.TypeReasoner
 [submodule "src/SparqlInterface"]
 	path = src/SparqlInterface
-	url = https://Weissger@github.com/Weissger/TST.SparqlInterface.git
-[submodule "src/TST.SparqlInterface"]
-	path = src/TST.SparqlInterface
 	url = https://Weissger@github.com/Weissger/TST.SparqlInterface.git
