@@ -1,7 +1,7 @@
 import sqlite3
 
 
-class SQLiteStore(object):
+class SimilarityStore(object):
     def __init__(self, sqlite_path):
         self.__connection = sqlite3.connect(sqlite_path)
         self.__connection.execute("""

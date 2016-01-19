@@ -1,11 +1,10 @@
 from SparqlInterface.src import ClientFactory
 from Utilities.Logger import log
 from ProcessManager.ProcessManager import ProcessManager, OccupiedError
-from SQLiteStore.SQLiteStore import SQLiteStore
+from SQLiteStore.SimilarityStore import SimilarityStore
 import time
 from multiprocessing import Process
 from SimilarityCalculation.SimilarityCalculation import get_similarity
-import grequests
 
 
 class TypeSimilarityTools(object):
