@@ -1,7 +1,7 @@
 from .SparqlInterface.src import ClientFactory
 from .Utilities.Logger import log
 from .ProcessManager.ProcessManager import ProcessManager, OccupiedError
-from .SQLiteStore.SimilarityStore import SimilarityStore
+from .SQLiteStores.SimilarityStore import SimilarityStore
 from .SimilarityCalculator.SimilarityCalculator import SimilarityCalculator
 import time
 from multiprocessing import Process
