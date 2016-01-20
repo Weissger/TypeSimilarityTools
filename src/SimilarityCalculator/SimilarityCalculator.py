@@ -1,6 +1,6 @@
-from SparqlInterface.src.Interfaces.AbstractClient import AbstractClient
-from SQLiteStores.InstanceCountStore import InstanceCountStore
-from SQLiteStores.SimilarityStore import SimilarityStore
+from ..SparqlInterface.src.Interfaces.AbstractClient import AbstractClient
+from ..SQLiteStores.InstanceCountStore import InstanceCountStore
+from ..SQLiteStores.SimilarityStore import SimilarityStore
 import gevent
 
 
