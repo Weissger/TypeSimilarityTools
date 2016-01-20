@@ -1,5 +1,6 @@
 import click
 from src.TypeSimilarityTools import TypeSimilarityTools
+from datetime import datetime
 
 
 @click.command()
@@ -13,12 +14,16 @@ from src.TypeSimilarityTools import TypeSimilarityTools
 @click.option('--n-processes', '-x', default="11",
               help='Number of processes to spawn simultaneously.')
 @click.option('--log-level', '-l', default="WARN")
-def main(server, user, password, type1, type2, force, log_level, n_processes):
+@click.option('--similarity-store', '-ss', default="data/similarities.db")
+@click.option('--instance-count-store', '-ics', default="data/instance_count.db")
+def main(server, user, password, type1, type2, force, log_level, n_processes, similarity_store, instance_count_store):
     if type1 is None or type2 is None:
         return 2
     similarity_tool = TypeSimilarityTools(server=server, user=user, password=password, n_processes=int(n_processes),
-                                   log_level=log_level)
-    similarity_tool.get_type_similarity(type1, type2, force_calc=force)
+                                   log_level=log_level, similarity_store=similarity_store, instance_count_store=instance_count_store)
+    cur_time = datetime.now()
+    print(similarity_tool.get_type_similarity(type1, type2, force_calc=force))
+    print("Time : {}".format(datetime.now() - cur_time))
 
 
 if __name__ == '__main__':

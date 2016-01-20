@@ -9,10 +9,17 @@ class SimilarityStore(object):
             """)
 
     def store_similarity(self, type_a, type_b, similarity):
-        pass
+        tmp = [type_a, type_b]
+        tmp.sort()
+        self.__connection.execute("""
+            INSERT INTO type_similarity VALUES (?, ?, ?)
+          """, tmp.append(similarity))
+        return self.__connection.commit()
 
     def get_similarity(self, type_a, type_b,):
-        pass
-
-    def has_similarity(self, type_a, type_b):
-        pass
+        tmp = [type_a, type_b]
+        tmp.sort()
+        self.__connection.execute("""
+            SELECT ?instance_count FROM type_similarity WHERE type_a=? AND type_b=?
+          """, tmp)
+        return self.__connection.fetchone()
