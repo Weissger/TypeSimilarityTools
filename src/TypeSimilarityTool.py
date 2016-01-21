@@ -8,7 +8,7 @@ from multiprocessing import Process
 
 
 class TypeSimilarityTools(object):
-    def __init__(self, server, user, password, n_processes, log_level, similarity_store=None,
+    def __init__(self, server=None, user=None, password=None, n_processes=None, log_level="INFO", similarity_store=None,
                  instance_count_store=None):
         log.setLevel(log_level)
         if n_processes:
