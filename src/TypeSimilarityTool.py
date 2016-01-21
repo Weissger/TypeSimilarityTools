@@ -7,7 +7,7 @@ import time
 from multiprocessing import Process
 
 
-class TypeSimilarityTools(object):
+class TypeSimilarityTool(object):
     def __init__(self, server=None, user=None, password=None, n_processes=None, log_level="INFO", similarity_store=None,
                  instance_count_store=None):
         log.setLevel(log_level)
